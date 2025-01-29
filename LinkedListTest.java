@@ -9,6 +9,16 @@
  */
 public class LinkedListTest {
 	public static void main (String[] args) {
+		MemoryBlock [] memoryBlockList = new MemoryBlock[20];
+		for (int i=0; i<20;i++){
+			memoryBlockList[i] = new MemoryBlock (i, i+1);
+		}
+		LinkedList  list = new LinkedList();
+		list.addFirst(memoryBlockList[0]);
+		System.out.println(list); //(0,1)
+		
+		
+		
 		MemorySpace m = new MemorySpace(1000);
 		System.out.println(m + "\n");
 		//// Expected output:
